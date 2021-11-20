@@ -15,11 +15,11 @@ define openldap::server::database (
   Optional[String[1]]                           $updateref       = undef,
   Optional[String[1]]                           $limits          = undef,
   # BDB/HDB options
-  Optional[String[1]]                           $dboptions       = undef,
+  Optional[Hash]                                $dboptions       = undef,
   Optional[String[1]]                           $synctype        = undef,
   # Synchronization options
   Optional[Boolean]                             $mirrormode      = undef,
-  Optional[String[1]]                           $syncusesubentry = undef,
+  Optional[Boolean]                             $syncusesubentry = undef,
   Optional[Variant[String[1],Array[String[1]]]] $syncrepl        = undef,
   Optional[String[1]]                           $security        = undef,
 ) {
